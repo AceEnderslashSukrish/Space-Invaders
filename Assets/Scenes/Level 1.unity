@@ -2327,7 +2327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540437513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4, z: 0}
+  m_LocalPosition: {x: 0, y: -4.25, z: 0}
   m_LocalScale: {x: 1, y: 0.2, z: 1}
   m_Children:
   - {fileID: 1269108444}
@@ -8107,7 +8107,7 @@ GameObject:
   - component: {fileID: 1973419173}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: EnemyMover
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8124,7 +8124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95beb9af6fd19b644916db8b830f5367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: right
+  direction: 114
   SpawnLine1: {fileID: 759579694}
   SpawnLine2: {fileID: 1541553650}
   SpawnLine3: {fileID: 179958316}

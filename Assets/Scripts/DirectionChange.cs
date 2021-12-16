@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class DirectionChange : MonoBehaviour
 {
-    [HideInInspector]
-    public EnemyMover enemyMoverScript;
+    private EnemyMover enemyMoverScript;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject enemyMoverObj = GameObject.FindWithTag("EnemyMover");
+
+        if (enemyMoverObj != null)
+        {
+            enemyMoverScript = enemyMoverObj.GetComponent<EnemyMover>();
+        }
+        if (enemyMoverObj == null)
+        {
+            Debug.Log("Cannot find enemy mover script on enemy mover object");
+        }
     }
 
     // Update is called once per frame
@@ -19,7 +27,7 @@ public class DirectionChange : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    public char OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("EnemyBlock"))
         {
@@ -31,5 +39,6 @@ public class DirectionChange : MonoBehaviour
             other.gameObject.transform.position = other.gameObject.transform.position + new Vector3(-1, -0.5f, 0);
             enemyMoverScript.direction = 'l';
         }
+        return enemyMoverScript.direction;
     }
 }

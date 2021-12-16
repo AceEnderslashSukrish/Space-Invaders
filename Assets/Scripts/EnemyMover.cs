@@ -36,7 +36,7 @@ public class EnemyMover : MonoBehaviour
         {
             timer += 0.05f;
             float timercount = Mathf.Floor(timer);
-            Debug.Log(timercount);
+            //Debug.Log(timercount);
 
             if (timercount == 1 && direction == 'r' && !done1)
             {

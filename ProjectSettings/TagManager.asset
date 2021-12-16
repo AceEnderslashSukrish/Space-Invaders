@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - EnemyBlock
   - LastEnemyBlock
+  - EnemyMover
   layers:
   - Default
   - TransparentFX
